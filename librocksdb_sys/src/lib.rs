@@ -719,6 +719,7 @@ extern "C" {
     pub fn crocksdb_drop_column_family(db: *mut DBInstance,
                                        column_family_handle: *mut DBCFHandle,
                                        err: *mut *mut c_char);
+    pub fn crocksdb_column_family_handle_get_id(cf: *mut DBCFHandle) -> u32;
     pub fn crocksdb_column_family_handle_destroy(column_family_handle: *mut DBCFHandle);
     pub fn crocksdb_list_column_families(db: *const DBOptions,
                                          path: *const c_char,
